@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songwriter Directory — Find & Hire Professional Songwriters</title>
+  <meta name="description" content="Find and hire professional songwriters, lyricists, and ghost writers for your next project. Browse by genre, style, and budget. Free to search.">
+  <meta name="keywords" content="songwriter directory, hire songwriter, lyricist for hire, professional songwriter, ghost writer music, find songwriter, songwriting services">
+  <link rel="canonical" href="https://songwriterdirectory.com/">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a2e; }
+
+    nav { background: #1a1a2e; color: white; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
+    .nav-cta { background: #7c3aed; color: white; text-decoration: none; padding: 0.45rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; }
+
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 4rem 1.5rem 3rem; text-align: center; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: normal; color: #c4b5fd; }
+    .hero p { color: #94a3b8; font-size: 0.95rem; max-width: 500px; margin: 0 auto 2rem; line-height: 1.6; }
+    .search-bar { display: flex; max-width: 520px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+    .search-bar input { flex: 1; padding: 0.85rem 1rem; border: none; font-size: 0.95rem; color: #1a1a2e; outline: none; }
+    .search-bar button { background: #7c3aed; color: white; border: none; padding: 0.85rem 1.25rem; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+
+    .genre-filters { display: flex; justify-content: center; gap: 0.5rem; padding: 1.25rem 1.5rem; flex-wrap: wrap; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
+    .genre-btn { padding: 0.35rem 0.9rem; border-radius: 99px; border: 1.5px solid #e2e8f0; background: white; font-size: 0.82rem; cursor: pointer; font-weight: 500; color: #64748b; transition: all 0.15s; }
+    .genre-btn.active, .genre-btn:hover { background: #7c3aed; border-color: #7c3aed; color: white; }
+
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem 3rem; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .section-header h2 { font-size: 1rem; font-weight: 700; }
+
+    .writer-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: 68px 1fr auto; gap: 1rem; align-items: start; transition: box-shadow 0.2s; }
+    .writer-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .writer-avatar { width: 68px; height: 68px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; color: white; flex-shrink: 0; }
+    .writer-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .writer-tagline { font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem; }
+    .writer-bio { font-size: 0.85rem; color: #64748b; line-height: 1.6; margin-bottom: 0.75rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .tag { background: #f3e8ff; color: #7c3aed; font-size: 0.73rem; font-weight: 600; padding: 0.18rem 0.55rem; border-radius: 99px; }
+    .tag.blue { background: #eff6ff; color: #2563eb; }
+    .tag.green { background: #f0fdf4; color: #16a34a; }
+    .writer-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; min-width: 110px; }
+    .rate { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; }
+    .rate-sub { font-size: 0.72rem; color: #94a3b8; }
+    .contact-btn { background: #7c3aed; color: white; border: none; padding: 0.45rem 0.9rem; border-radius: 7px; font-size: 0.82rem; font-weight: 700; cursor: pointer; white-space: nowrap; text-decoration: none; display: inline-block; }
+
+    /* TOOLS SECTION */
+    .tools-section { background: #f3e8ff; border: 1px solid #ddd6fe; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+    .tools-section h3 { font-size: 1rem; font-weight: 700; color: #6d28d9; margin-bottom: 0.35rem; }
+    .tools-section p { color: #7c3aed; font-size: 0.85rem; margin-bottom: 1rem; }
+    .tools-grid { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+    .tool-link { background: white; border: 1.5px solid #ddd6fe; border-radius: 99px; padding: 0.4rem 0.9rem; font-size: 0.82rem; font-weight: 600; color: #7c3aed; text-decoration: none; transition: all 0.15s; }
+    .tool-link:hover { background: #7c3aed; color: white; border-color: #7c3aed; }
+
+    /* LIST YOURSELF */
+    .list-section { background: linear-gradient(135deg, #4c1d95, #7c3aed); color: white; border-radius: 12px; padding: 2rem; text-align: center; margin: 2rem 0; }
+    .list-section h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .list-section p { opacity: 0.9; font-size: 0.88rem; margin-bottom: 1.25rem; line-height: 1.5; }
+    .list-form { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+    .list-form input { padding: 0.65rem 1rem; border-radius: 8px; border: none; font-size: 0.9rem; min-width: 220px; }
+    .list-form button { background: white; color: #7c3aed; border: none; padding: 0.65rem 1.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+
+    .content-section { color: #64748b; line-height: 1.7; font-size: 0.9rem; margin: 2rem 0; }
+    .content-section h2 { color: #1a1a2e; font-size: 1rem; margin: 1.25rem 0 0.4rem; }
+    .content-section ul { padding-left: 1.25rem; }
+    .content-section li { margin-bottom: 0.3rem; }
+    footer { background: #1a1a2e; color: #64748b; text-align: center; padding: 1.5rem; font-size: 0.8rem; }
+    footer a { color: #64748b; margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🎵 SongwriterDirectory.com</div>
+  <a href="#list-yourself" class="nav-cta">Get Listed</a>
+</nav>
+
+<section class="hero">
+  <h1>Find <em>Professional</em> Songwriters<br>& Lyricists for Hire</h1>
+  <p>Browse verified songwriters, lyricists, and ghostwriters by genre, style, and budget. From pop hooks to country ballads.</p>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by genre, style, or specialty..." oninput="filterWriters()">
+    <button onclick="filterWriters()">Search</button>
+  </div>
+</section>
+
+<div class="genre-filters">
+  <button class="genre-btn active" onclick="setGenre('all', this)">All Genres</button>
+  <button class="genre-btn" onclick="setGenre('pop', this)">Pop</button>
+  <button class="genre-btn" onclick="setGenre('country', this)">Country</button>
+  <button class="genre-btn" onclick="setGenre('rnb', this)">R&B / Soul</button>
+  <button class="genre-btn" onclick="setGenre('hiphop', this)">Hip-Hop</button>
+  <button class="genre-btn" onclick="setGenre('rock', this)">Rock</button>
+  <button class="genre-btn" onclick="setGenre('christian', this)">Christian / Gospel</button>
+  <button class="genre-btn" onclick="setGenre('folk', this)">Folk / Indie</button>
+  <button class="genre-btn" onclick="setGenre('commercial', this)">Commercial / Jingles</button>
+</div>
+
+<main>
+  <div class="section-header">
+    <h2 id="resultsCount">Showing 5 songwriters</h2>
+  </div>
+
+  <div id="writerList">
+
+    <div class="writer-card" data-genres="pop rnb commercial">
+      <div class="writer-avatar" style="background:linear-gradient(135deg,#7c3aed,#db2777)">JM</div>
+      <div>
+        <div class="writer-name">Jessica Mills</div>
+        <div class="writer-tagline">Pop & R&B Songwriter — Los Angeles, CA</div>
+        <div class="writer-bio">10 years writing for major and indie artists. Specializes in pop hooks, R&B ballads, and commercial sync placements. 50+ placed songs across streaming platforms.</div>
+        <div class="tags">
+          <span class="tag">Pop</span>
+          <span class="tag">R&B</span>
+          <span class="tag blue">Sync Licensing</span>
+          <span class="tag green">Verified</span>
+        </div>
+      </div>
+      <div class="writer-meta">
+        <div class="rate">$300–$800<div class="rate-sub">per song</div></div>
+        <a href="#list-yourself" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="writer-card" data-genres="country folk">
+      <div class="writer-avatar" style="background:linear-gradient(135deg,#b45309,#d97706)">TW</div>
+      <div>
+        <div class="writer-name">Tyler Wade</div>
+        <div class="writer-tagline">Country & Folk Songwriter — Nashville, TN</div>
+        <div class="writer-bio">Nashville-based songwriter with cuts on independent country labels. Specializes in storytelling, traditional country, and Americana. Available for co-writes and full song delivery.</div>
+        <div class="tags">
+          <span class="tag">Country</span>
+          <span class="tag">Folk</span>
+          <span class="tag">Americana</span>
+          <span class="tag green">Verified</span>
+        </div>
+      </div>
+      <div class="writer-meta">
+        <div class="rate">$200–$600<div class="rate-sub">per song</div></div>
+        <a href="#list-yourself" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="writer-card" data-genres="hiphop rnb pop">
+      <div class="writer-avatar" style="background:linear-gradient(135deg,#0891b2,#7c3aed)">DK</div>
+      <div>
+        <div class="writer-name">Dani Kim</div>
+        <div class="writer-tagline">Hip-Hop & Pop Lyricist — Atlanta, GA</div>
+        <div class="writer-bio">Ghostwriter and lyricist for indie hip-hop and pop artists. Fast turnaround, multiple revision rounds included. Specializes in hooks, verses, and full track writing from beats.</div>
+        <div class="tags">
+          <span class="tag">Hip-Hop</span>
+          <span class="tag">Pop</span>
+          <span class="tag blue">Ghostwriting</span>
+          <span class="tag green">Verified</span>
+        </div>
+      </div>
+      <div class="writer-meta">
+        <div class="rate">$150–$500<div class="rate-sub">per song</div></div>
+        <a href="#list-yourself" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="writer-card" data-genres="christian gospel folk">
+      <div class="writer-avatar" style="background:linear-gradient(135deg,#059669,#0d9488)">RB</div>
+      <div>
+        <div class="writer-name">Rebecca Brooks</div>
+        <div class="writer-tagline">Christian & Gospel Songwriter — Dallas, TX</div>
+        <div class="writer-bio">Worship leader and songwriter with 15+ years writing for churches and Christian artists. Specializes in contemporary worship, gospel, and inspirational music for licensed use.</div>
+        <div class="tags">
+          <span class="tag">Christian</span>
+          <span class="tag">Gospel</span>
+          <span class="tag">Worship</span>
+          <span class="tag green">Verified</span>
+        </div>
+      </div>
+      <div class="writer-meta">
+        <div class="rate">$250–$700<div class="rate-sup">per song</div></div>
+        <a href="#list-yourself" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="writer-card" data-genres="commercial pop rock">
+      <div class="writer-avatar" style="background:linear-gradient(135deg,#dc2626,#f59e0b)">MA</div>
+      <div>
+        <div class="writer-name">Marco Alvarez</div>
+        <div class="writer-tagline">Commercial & Jingle Songwriter — Miami, FL</div>
+        <div class="writer-bio">Writes for advertising, corporate videos, and brand campaigns. Bilingual (English/Spanish). Specializes in catchy commercial hooks, product jingles, and branded audio content.</div>
+        <div class="tags">
+          <span class="tag">Commercial</span>
+          <span class="tag">Jingles</span>
+          <span class="tag blue">Bilingual</span>
+          <span class="tag green">Verified</span>
+        </div>
+      </div>
+      <div class="writer-meta">
+        <div class="rate">$400–$1,200<div class="rate-sub">per project</div></div>
+        <a href="#list-yourself" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TOOLS SECTION -->
+  <div class="tools-section">
+    <h3>🛠️ Free Tools for Songwriters & Lyricists</h3>
+    <p>Use these free tools to craft better lyrics, find rhymes, and build your songs</p>
+    <div class="tools-grid">
+      <a href="https://findmyrhyme.com" class="tool-link">🎵 Rhyme Generator</a>
+      <a href="https://freeplagiarismcheck.com" class="tool-link">🔍 Plagiarism Checker</a>
+      <a href="https://aicontentdetectorfree.com" class="tool-link">🤖 AI Content Detector</a>
+    </div>
+  </div>
+
+  <!-- LIST YOURSELF -->
+  <div class="list-section" id="list-yourself">
+    <h3>Are You a Songwriter or Lyricist?</h3>
+    <p>Get discovered by artists, producers, and brands looking for your sound. Free listing — always.</p>
+    <div class="list-form">
+      <input type="email" placeholder="Your email address">
+      <button>Apply for Free</button>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>How to Hire a Songwriter</h2>
+    <p>Finding the right songwriter for your project starts with knowing your genre, budget, and what you want delivered — a hook, a full song, or a co-write. Browse by genre above and read each profile carefully. Most listed songwriters offer a brief consultation before committing to a project.</p>
+
+    <h2>What Does a Songwriter Cost?</h2>
+    <ul>
+      <li><strong>Entry-level / indie:</strong> $100–$300 per song</li>
+      <li><strong>Mid-level / experienced:</strong> $300–$800 per song</li>
+      <li><strong>Commercial / sync:</strong> $500–$2,000+ per project</li>
+      <li><strong>Major label / placement deals:</strong> Negotiated per project</li>
+    </ul>
+
+    <h2>What is Ghostwriting in Music?</h2>
+    <p>Ghostwriting means a songwriter writes lyrics or songs for an artist who releases the work under their own name. This is completely legal and common across all genres. Many artists work with ghostwriters for albums, singles, and commercial projects.</p>
+
+    <h2>Free Songwriter Tools</h2>
+    <p>Before hiring a songwriter, try our free tools. The <a href="https://findmyrhyme.com" style="color:#7c3aed">Rhyme Generator</a> helps you find perfect rhymes for your lyrics. Great for co-writing sessions or getting started on a song before bringing in a professional.</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 SongwriterDirectory.com — Find and hire professional songwriters
+  <span style="display:block;margin-top:0.35rem"><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a> · <a href="https://findmyrhyme.com">Rhyme Generator</a></span>
+</footer>
+
+<script>
+let activeGenre = 'all';
+
+function setGenre(genre, btn) {
+  activeGenre = genre;
+  document.querySelectorAll('.genre-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterWriters();
+}
+
+function filterWriters() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.writer-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const genres = card.dataset.genres || '';
+    const text = card.innerText.toLowerCase();
+    const matchGenre = activeGenre === 'all' || genres.includes(activeGenre);
+    const matchSearch = !query || text.includes(query);
+    if (matchGenre && matchSearch) { card.style.display = ''; visible++; }
+    else card.style.display = 'none';
+  });
+  document.getElementById('resultsCount').textContent = `Showing ${visible} songwriter${visible !== 1 ? 's' : ''}`;
+}
+</script>
+</body>
+</html>
