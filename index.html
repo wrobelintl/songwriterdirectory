@@ -73,7 +73,7 @@
 <body>
 
 <nav>
-  <div class="logo">🎵 SongwriterDirectory.com</div>
+  <div class="logo"> SongwriterDirectory.com</div>
   <a href="#list-yourself" class="nav-cta">Get Listed</a>
 </nav>
 
@@ -204,12 +204,12 @@
 
   <!-- TOOLS SECTION -->
   <div class="tools-section">
-    <h3>🛠️ Free Tools for Songwriters & Lyricists</h3>
+    <h3> Free Tools for Songwriters & Lyricists</h3>
     <p>Use these free tools to craft better lyrics, find rhymes, and build your songs</p>
     <div class="tools-grid">
-      <a href="https://findmyrhyme.com" class="tool-link">🎵 Rhyme Generator</a>
-      <a href="https://freeplagiarismcheck.com" class="tool-link">🔍 Plagiarism Checker</a>
-      <a href="https://aicontentdetectorfree.com" class="tool-link">🤖 AI Content Detector</a>
+      <a href="https://findmyrhyme.com" class="tool-link"> Rhyme Generator</a>
+      <a href="https://freeplagiarismcheck.com" class="tool-link"> Plagiarism Checker</a>
+      <a href="https://aicontentdetectorfree.com" class="tool-link"> AI Content Detector</a>
     </div>
   </div>
 
@@ -263,10 +263,10 @@ function filterWriters() {
   const cards = document.querySelectorAll('.writer-card');
   let visible = 0;
   cards.forEach(card => {
-    const genres = card.dataset.genres || '';
+    const genres = card.dataset.genres  '';
     const text = card.innerText.toLowerCase();
-    const matchGenre = activeGenre === 'all' || genres.includes(activeGenre);
-    const matchSearch = !query || text.includes(query);
+    const matchGenre = activeGenre === 'all'  genres.includes(activeGenre);
+    const matchSearch = !query  text.includes(query);
     if (matchGenre && matchSearch) { card.style.display = ''; visible++; }
     else card.style.display = 'none';
   });
