@@ -4,8 +4,8 @@
   <meta name="google-site-verification" content="3UI8xvYPQoIRssegI2UPZWULpm4aeyh_A7A3do24NhQ" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Songwriter Directory — Find & Hire Professional Songwriters</title>
-  <meta name="description" content="Find and hire professional songwriters, lyricists, and ghost writers for your next project. Browse by genre, style, and budget. Free to search.">
+  <title>Hiring a Songwriter — Rates and Practical Guide</title>
+  <meta name="description" content="What it costs to hire a songwriter or lyricist, and how to brief one. We do not list, verify, rate or endorse songwriters.">
   <meta name="keywords" content="songwriter directory, hire songwriter, lyricist for hire, professional songwriter, ghost writer music, find songwriter, songwriting services">
   <link rel="canonical" href="https://songwriterdirectory.com/">
   <style>
@@ -69,139 +69,30 @@
     .content-section li { margin-bottom: 0.3rem; }
     footer { background: #1a1a2e; color: #64748b; text-align: center; padding: 1.5rem; font-size: 0.8rem; }
     footer a { color: #64748b; margin: 0 0.5rem; }
-  </style>
+      .notice { background:#fff; border:1px solid #e2e8f0; border-left:4px solid #7c3aed; border-radius:12px; padding:1.75rem; margin-bottom:1.5rem; }
+    .notice h2 { font-size:1.05rem; font-weight:800; color:#1a1a2e; margin-bottom:0.6rem; }
+    .notice p { color:#475569; font-size:0.9rem; line-height:1.65; margin-bottom:0.6rem; }
+    .notice a { color:#7c3aed; font-weight:600; }
+</style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6286935824893984" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <nav>
   <div class="logo"> SongwriterDirectory.com</div>
-  <a href="#list-yourself" class="nav-cta">Get Listed</a>
 </nav>
 
 <section class="hero">
-  <h1>Find <em>Professional</em> Songwriters<br>& Lyricists for Hire</h1>
-  <p>Browse verified songwriters, lyricists, and ghostwriters by genre, style, and budget. From pop hooks to country ballads.</p>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search by genre, style, or specialty..." oninput="filterWriters()">
-    <button onclick="filterWriters()">Search</button>
-  </div>
+  <h1>Hiring a <em>Songwriter</em><br>or Lyricist</h1>
+  <p>What the work typically costs and how to brief it well. This site does not list songwriters, and does not verify, rate or endorse anyone.</p>
 </section>
 
-<div class="genre-filters">
-  <button class="genre-btn active" onclick="setGenre('all', this)">All Genres</button>
-  <button class="genre-btn" onclick="setGenre('pop', this)">Pop</button>
-  <button class="genre-btn" onclick="setGenre('country', this)">Country</button>
-  <button class="genre-btn" onclick="setGenre('rnb', this)">R&B / Soul</button>
-  <button class="genre-btn" onclick="setGenre('hiphop', this)">Hip-Hop</button>
-  <button class="genre-btn" onclick="setGenre('rock', this)">Rock</button>
-  <button class="genre-btn" onclick="setGenre('christian', this)">Christian / Gospel</button>
-  <button class="genre-btn" onclick="setGenre('folk', this)">Folk / Indie</button>
-  <button class="genre-btn" onclick="setGenre('commercial', this)">Commercial / Jingles</button>
-</div>
-
 <main>
-  <div class="section-header">
-    <h2 id="resultsCount">Showing 5 songwriters</h2>
-  </div>
 
-  <div id="writerList">
-
-    <div class="writer-card" data-genres="pop rnb commercial">
-      <div class="writer-avatar" style="background:linear-gradient(135deg,#7c3aed,#db2777)">JM</div>
-      <div>
-        <div class="writer-name">Jessica Mills</div>
-        <div class="writer-tagline">Pop & R&B Songwriter — Los Angeles, CA</div>
-        <div class="writer-bio">10 years writing for major and indie artists. Specializes in pop hooks, R&B ballads, and commercial sync placements. 50+ placed songs across streaming platforms.</div>
-        <div class="tags">
-          <span class="tag">Pop</span>
-          <span class="tag">R&B</span>
-          <span class="tag blue">Sync Licensing</span>
-          <span class="tag green">Verified</span>
-        </div>
-      </div>
-      <div class="writer-meta">
-        <div class="rate">$300–$800<div class="rate-sub">per song</div></div>
-        <a href="#list-yourself" class="contact-btn">Contact</a>
-      </div>
-    </div>
-
-    <div class="writer-card" data-genres="country folk">
-      <div class="writer-avatar" style="background:linear-gradient(135deg,#b45309,#d97706)">TW</div>
-      <div>
-        <div class="writer-name">Tyler Wade</div>
-        <div class="writer-tagline">Country & Folk Songwriter — Nashville, TN</div>
-        <div class="writer-bio">Nashville-based songwriter with cuts on independent country labels. Specializes in storytelling, traditional country, and Americana. Available for co-writes and full song delivery.</div>
-        <div class="tags">
-          <span class="tag">Country</span>
-          <span class="tag">Folk</span>
-          <span class="tag">Americana</span>
-          <span class="tag green">Verified</span>
-        </div>
-      </div>
-      <div class="writer-meta">
-        <div class="rate">$200–$600<div class="rate-sub">per song</div></div>
-        <a href="#list-yourself" class="contact-btn">Contact</a>
-      </div>
-    </div>
-
-    <div class="writer-card" data-genres="hiphop rnb pop">
-      <div class="writer-avatar" style="background:linear-gradient(135deg,#0891b2,#7c3aed)">DK</div>
-      <div>
-        <div class="writer-name">Dani Kim</div>
-        <div class="writer-tagline">Hip-Hop & Pop Lyricist — Atlanta, GA</div>
-        <div class="writer-bio">Ghostwriter and lyricist for indie hip-hop and pop artists. Fast turnaround, multiple revision rounds included. Specializes in hooks, verses, and full track writing from beats.</div>
-        <div class="tags">
-          <span class="tag">Hip-Hop</span>
-          <span class="tag">Pop</span>
-          <span class="tag blue">Ghostwriting</span>
-          <span class="tag green">Verified</span>
-        </div>
-      </div>
-      <div class="writer-meta">
-        <div class="rate">$150–$500<div class="rate-sub">per song</div></div>
-        <a href="#list-yourself" class="contact-btn">Contact</a>
-      </div>
-    </div>
-
-    <div class="writer-card" data-genres="christian gospel folk">
-      <div class="writer-avatar" style="background:linear-gradient(135deg,#059669,#0d9488)">RB</div>
-      <div>
-        <div class="writer-name">Rebecca Brooks</div>
-        <div class="writer-tagline">Christian & Gospel Songwriter — Dallas, TX</div>
-        <div class="writer-bio">Worship leader and songwriter with 15+ years writing for churches and Christian artists. Specializes in contemporary worship, gospel, and inspirational music for licensed use.</div>
-        <div class="tags">
-          <span class="tag">Christian</span>
-          <span class="tag">Gospel</span>
-          <span class="tag">Worship</span>
-          <span class="tag green">Verified</span>
-        </div>
-      </div>
-      <div class="writer-meta">
-        <div class="rate">$250–$700<div class="rate-sup">per song</div></div>
-        <a href="#list-yourself" class="contact-btn">Contact</a>
-      </div>
-    </div>
-
-    <div class="writer-card" data-genres="commercial pop rock">
-      <div class="writer-avatar" style="background:linear-gradient(135deg,#dc2626,#f59e0b)">MA</div>
-      <div>
-        <div class="writer-name">Marco Alvarez</div>
-        <div class="writer-tagline">Commercial & Jingle Songwriter — Miami, FL</div>
-        <div class="writer-bio">Writes for advertising, corporate videos, and brand campaigns. Bilingual (English/Spanish). Specializes in catchy commercial hooks, product jingles, and branded audio content.</div>
-        <div class="tags">
-          <span class="tag">Commercial</span>
-          <span class="tag">Jingles</span>
-          <span class="tag blue">Bilingual</span>
-          <span class="tag green">Verified</span>
-        </div>
-      </div>
-      <div class="writer-meta">
-        <div class="rate">$400–$1,200<div class="rate-sub">per project</div></div>
-        <a href="#list-yourself" class="contact-btn">Contact</a>
-      </div>
-    </div>
-
+  <div class="notice">
+    <h2>No songwriters are listed here</h2>
+    <p>This page previously showed 5 example songwriter profiles. They were not real people and have been removed. Nothing is listed in their place.</p>
+    <p>We do not verify, rate, rank or endorse songwriters, and we are not accepting listings at this time. The rate guidance below is general market information, not a quote from anyone.</p>
+    <p style="margin-top:1rem">Corrections or removal requests: <a href="mailto:shane@warrenbg.com?subject=songwriterdirectory.com%20correction%20or%20removal">shane@warrenbg.com</a></p>
   </div>
 
   <!-- TOOLS SECTION -->
@@ -217,17 +108,13 @@
 
   <!-- LIST YOURSELF -->
   <div class="list-section" id="list-yourself">
-    <h3>Are You a Songwriter or Lyricist?</h3>
-    <p>Get discovered by artists, producers, and brands looking for your sound. Free listing — always.</p>
-    <div class="list-form">
-      <input type="email" placeholder="Your email address">
-      <button>Apply for Free</button>
-    </div>
+    <h3>Corrections and removals</h3>
+    <p>We are not accepting listings. If something on this page is wrong, or you want a reference to you changed or removed, email <a href="mailto:shane@warrenbg.com?subject=songwriterdirectory.com%20correction%20or%20removal" style="color:inherit;text-decoration:underline">shane@warrenbg.com</a> and we will action it.</p>
   </div>
 
   <div class="content-section">
     <h2>How to Hire a Songwriter</h2>
-    <p>Finding the right songwriter for your project starts with knowing your genre, budget, and what you want delivered — a hook, a full song, or a co-write. Browse by genre above and read each profile carefully. Most listed songwriters offer a brief consultation before committing to a project.</p>
+    <p>Start by knowing your genre, your budget, and what you actually want delivered — a hook, a full song, or a co-write. Ask for two samples close to your brief, agree the split and credit in writing before work starts, and be explicit about who owns the master and the publishing.</p>
 
     <h2>What Does a Songwriter Cost?</h2>
     <ul>
@@ -246,35 +133,10 @@
 </main>
 
 <footer>
-  © 2026 SongwriterDirectory.com — Find and hire professional songwriters
+  © 2026 SongwriterDirectory.com — General guidance only. We do not list, verify, rate or endorse songwriters.
   <span style="display:block;margin-top:0.35rem"><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a> · <a href="https://findmyrhyme.com">Rhyme Generator</a></span>
   <p style="margin-top:0.5rem">A service of <a href="https://warrenbg.com" style="color:#f59e0b;font-weight:700;">Warren Business Group</a> &mdash; Building AI-powered businesses.</p>
 </footer>
 
-<script>
-let activeGenre = 'all';
-
-function setGenre(genre, btn) {
-  activeGenre = genre;
-  document.querySelectorAll('.genre-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  filterWriters();
-}
-
-function filterWriters() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  const cards = document.querySelectorAll('.writer-card');
-  let visible = 0;
-  cards.forEach(card => {
-    const genres = card.dataset.genres  '';
-    const text = card.innerText.toLowerCase();
-    const matchGenre = activeGenre === 'all'  genres.includes(activeGenre);
-    const matchSearch = !query  text.includes(query);
-    if (matchGenre && matchSearch) { card.style.display = ''; visible++; }
-    else card.style.display = 'none';
-  });
-  document.getElementById('resultsCount').textContent = `Showing ${visible} songwriter${visible !== 1 ? 's' : ''}`;
-}
-</script>
 </body>
 </html>
