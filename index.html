@@ -4,138 +4,97 @@
   <meta name="google-site-verification" content="3UI8xvYPQoIRssegI2UPZWULpm4aeyh_A7A3do24NhQ" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hiring a Songwriter — Rates and Practical Guide</title>
-  <meta name="description" content="What it costs to hire a songwriter or lyricist, and how to brief one. We do not list, verify, rate or endorse songwriters.">
-  <meta name="keywords" content="songwriter directory, hire songwriter, lyricist for hire, professional songwriter, ghost writer music, find songwriter, songwriting services">
+  <title>What It Costs to Hire a Songwriter — Rate Guide</title>
+  <meta name="description" content="What songwriters and lyricists typically charge, how to brief one, and how splits and credit usually work. General market guidance — we do not list, verify, rate or endorse anyone.">
+  <meta name="keywords" content="songwriter rates, cost to hire a songwriter, lyricist rates, ghostwriting music, songwriting splits">
   <link rel="canonical" href="https://songwriterdirectory.com/">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a2e; }
-
-    nav { background: #1a1a2e; color: white; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
-    .nav-cta { background: #7c3aed; color: white; text-decoration: none; padding: 0.45rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; }
-
-    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 4rem 1.5rem 3rem; text-align: center; }
-    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem; }
-    .hero h1 em { font-style: normal; color: #c4b5fd; }
-    .hero p { color: #94a3b8; font-size: 0.95rem; max-width: 500px; margin: 0 auto 2rem; line-height: 1.6; }
-    .search-bar { display: flex; max-width: 520px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
-    .search-bar input { flex: 1; padding: 0.85rem 1rem; border: none; font-size: 0.95rem; color: #1a1a2e; outline: none; }
-    .search-bar button { background: #7c3aed; color: white; border: none; padding: 0.85rem 1.25rem; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
-
-    .genre-filters { display: flex; justify-content: center; gap: 0.5rem; padding: 1.25rem 1.5rem; flex-wrap: wrap; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
-    .genre-btn { padding: 0.35rem 0.9rem; border-radius: 99px; border: 1.5px solid #e2e8f0; background: white; font-size: 0.82rem; cursor: pointer; font-weight: 500; color: #64748b; transition: all 0.15s; }
-    .genre-btn.active, .genre-btn:hover { background: #7c3aed; border-color: #7c3aed; color: white; }
-
-    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem 3rem; }
-    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .section-header h2 { font-size: 1rem; font-weight: 700; }
-
-    .writer-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: 68px 1fr auto; gap: 1rem; align-items: start; transition: box-shadow 0.2s; }
-    .writer-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
-    .writer-avatar { width: 68px; height: 68px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; color: white; flex-shrink: 0; }
-    .writer-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
-    .writer-tagline { font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem; }
-    .writer-bio { font-size: 0.85rem; color: #64748b; line-height: 1.6; margin-bottom: 0.75rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-    .tag { background: #f3e8ff; color: #7c3aed; font-size: 0.73rem; font-weight: 600; padding: 0.18rem 0.55rem; border-radius: 99px; }
-    .tag.blue { background: #eff6ff; color: #2563eb; }
-    .tag.green { background: #f0fdf4; color: #16a34a; }
-    .writer-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; min-width: 110px; }
-    .rate { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; }
-    .rate-sub { font-size: 0.72rem; color: #94a3b8; }
-    .contact-btn { background: #7c3aed; color: white; border: none; padding: 0.45rem 0.9rem; border-radius: 7px; font-size: 0.82rem; font-weight: 700; cursor: pointer; white-space: nowrap; text-decoration: none; display: inline-block; }
-
-    /* TOOLS SECTION */
-    .tools-section { background: #f3e8ff; border: 1px solid #ddd6fe; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
-    .tools-section h3 { font-size: 1rem; font-weight: 700; color: #6d28d9; margin-bottom: 0.35rem; }
-    .tools-section p { color: #7c3aed; font-size: 0.85rem; margin-bottom: 1rem; }
-    .tools-grid { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
-    .tool-link { background: white; border: 1.5px solid #ddd6fe; border-radius: 99px; padding: 0.4rem 0.9rem; font-size: 0.82rem; font-weight: 600; color: #7c3aed; text-decoration: none; transition: all 0.15s; }
-    .tool-link:hover { background: #7c3aed; color: white; border-color: #7c3aed; }
-
-    /* LIST YOURSELF */
-    .list-section { background: linear-gradient(135deg, #4c1d95, #7c3aed); color: white; border-radius: 12px; padding: 2rem; text-align: center; margin: 2rem 0; }
-    .list-section h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem; }
-    .list-section p { opacity: 0.9; font-size: 0.88rem; margin-bottom: 1.25rem; line-height: 1.5; }
-    .list-form { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
-    .list-form input { padding: 0.65rem 1rem; border-radius: 8px; border: none; font-size: 0.9rem; min-width: 220px; }
-    .list-form button { background: white; color: #7c3aed; border: none; padding: 0.65rem 1.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
-
-    .content-section { color: #64748b; line-height: 1.7; font-size: 0.9rem; margin: 2rem 0; }
-    .content-section h2 { color: #1a1a2e; font-size: 1rem; margin: 1.25rem 0 0.4rem; }
-    .content-section ul { padding-left: 1.25rem; }
-    .content-section li { margin-bottom: 0.3rem; }
-    footer { background: #1a1a2e; color: #64748b; text-align: center; padding: 1.5rem; font-size: 0.8rem; }
-    footer a { color: #64748b; margin: 0 0.5rem; }
-      .notice { background:#fff; border:1px solid #e2e8f0; border-left:4px solid #7c3aed; border-radius:12px; padding:1.75rem; margin-bottom:1.5rem; }
-    .notice h2 { font-size:1.05rem; font-weight:800; color:#1a1a2e; margin-bottom:0.6rem; }
-    .notice p { color:#475569; font-size:0.9rem; line-height:1.65; margin-bottom:0.6rem; }
-    .notice a { color:#7c3aed; font-weight:600; }
-</style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6286935824893984" crossorigin="anonymous"></script>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a2e; line-height: 1.7; }
+    a { color: #7c3aed; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 3.5rem 1.5rem 2.75rem; text-align: center; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.25; margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: normal; color: #a78bfa; }
+    .hero p { color: #c7d2fe; max-width: 620px; margin: 0 auto; font-size: 1rem; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .disclaimer { background: #f3f0ff; border-left: 4px solid #7c3aed; border-radius: 8px; padding: 1rem 1.15rem; font-size: 0.88rem; color: #4c1d95; margin-bottom: 2.25rem; }
+    h2 { font-size: 1.2rem; font-weight: 800; margin: 2.25rem 0 0.6rem; padding-top: 0.5rem; border-top: 1px solid #e5e7eb; }
+    p { margin-bottom: 1rem; color: #374151; }
+    ul { margin: 0 0 1rem 1.25rem; color: #374151; }
+    li { margin-bottom: 0.5rem; }
+    strong { color: #111827; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.9rem; display: block; overflow-x: auto; }
+    th, td { text-align: left; padding: 0.6rem 0.7rem; border-bottom: 1px solid #e5e7eb; }
+    th { color: #7c3aed; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    td:first-child { white-space: nowrap; font-weight: 600; }
+    .tools { background: #f3f0ff; border-radius: 12px; padding: 1.5rem; text-align: center; margin: 2.5rem 0; }
+    .tools h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .tools p { font-size: 0.88rem; margin-bottom: 1rem; }
+    .tools a { display: inline-block; background: white; border: 1.5px solid #ddd6fe; border-radius: 99px; padding: 0.5rem 1.1rem; margin: 0.2rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    footer { background: #1a1a2e; color: #94a3b8; text-align: center; padding: 2rem 1.5rem; font-size: 0.8rem; }
+    footer a { color: #94a3b8; margin: 0 0.4rem; }
+  </style>
 </head>
 <body>
-<nav>
-  <div class="logo"> SongwriterDirectory.com</div>
-</nav>
 
 <section class="hero">
-  <h1>Hiring a <em>Songwriter</em><br>or Lyricist</h1>
-  <p>What the work typically costs and how to brief it well. This site does not list songwriters, and does not verify, rate or endorse anyone.</p>
+  <h1>What It Costs to Hire<br>a <em>Songwriter</em></h1>
+  <p>Typical market rates, how to brief the work, and how splits and credit usually get agreed.</p>
 </section>
 
-<main>
+<div class="wrap">
+  <div class="disclaimer"><strong>General guidance only.</strong> These are broad market ranges, not quotes, and not an offer of anyone's services. This site does not list, verify, rate or endorse songwriters, and takes no commission from anyone. What an individual writer charges depends on their track record, the rights involved and your deadline.</div>
 
-  <div class="notice">
-    <h2>No songwriters are listed here</h2>
-    <p>This page previously showed 5 example songwriter profiles. They were not real people and have been removed. Nothing is listed in their place.</p>
-    <p>We do not verify, rate, rank or endorse songwriters, and we are not accepting listings at this time. The rate guidance below is general market information, not a quote from anyone.</p>
-    <p style="margin-top:1rem">Corrections or removal requests: <a href="mailto:shane@warrenbg.com?subject=songwriterdirectory.com%20correction%20or%20removal">shane@warrenbg.com</a></p>
+  <h2>What songwriters typically charge</h2>
+  <p>Rates vary enormously, and the single biggest driver is not the writing itself but <strong>what rights and credit you are buying</strong>. A flat fee that leaves the writer with no publishing share costs more upfront than a deal where they retain a percentage. Treat these as opening reference points:</p>
+  <table>
+    <tr><th>Level</th><th>Typical range</th></tr>
+    <tr><td>Entry-level / indie</td><td>$100–$300 per song</td></tr>
+    <tr><td>Mid-level / experienced</td><td>$300–$800 per song</td></tr>
+    <tr><td>Commercial / sync</td><td>$500–$2,000+ per project</td></tr>
+    <tr><td>Major label / placement deals</td><td>Negotiated per project</td></tr>
+  </table>
+  <p>Jingle and brand work usually prices per project rather than per song, and often carries a separate usage or buyout fee depending on where the music will run and for how long. Topline writing over an existing track is generally cheaper than a full song written from nothing.</p>
+
+  <h2>How to brief the work</h2>
+  <p>Most disputes come from a vague brief rather than a bad writer. Before you approach anyone, be able to answer:</p>
+  <ul>
+    <li><strong>What exactly are you commissioning?</strong> A hook, a topline over an existing instrumental, a full lyric, or a complete song including melody and structure.</li>
+    <li><strong>What are the reference tracks?</strong> Two or three songs that sound like the target. This communicates more in thirty seconds than a page of description.</li>
+    <li><strong>How many revisions are included?</strong> Agree a number. "Until I'm happy" is not a scope.</li>
+    <li><strong>What is the deadline, and what happens if it slips?</strong></li>
+  </ul>
+  <p>Ask for two samples close to your brief rather than a general showreel. A writer strong in one genre may be ordinary in another.</p>
+
+  <h2>Splits, credit and ownership</h2>
+  <p>Agree these <strong>in writing before any work starts</strong>, not after you hear something you like. The three separate questions people tend to blur together:</p>
+  <ul>
+    <li><strong>Songwriting split</strong> — the percentage of the composition each contributor owns. This drives future royalties and is separate from any fee you pay.</li>
+    <li><strong>Credit</strong> — whose name appears, and where. A ghostwriting arrangement means the writer is not publicly credited, which is entirely legal and common across every genre, but it must be explicit.</li>
+    <li><strong>Master ownership</strong> — who owns the actual recording, which is a different asset from the song itself.</li>
+  </ul>
+  <p>A flat "work for hire" fee with no ongoing split is a legitimate structure, but it should be stated plainly rather than assumed. Where money is meaningful, have a music lawyer look at the agreement.</p>
+
+  <h2>What ghostwriting means in music</h2>
+  <p>Ghostwriting is when a songwriter writes lyrics or songs for an artist who releases the work under their own name. It is completely legal, extremely common across all genres, and usually governed by a confidentiality clause alongside the split and credit terms. The writer may still retain a publishing share even without a public credit — that is a negotiating point, not a fixed rule.</p>
+
+  <div class="tools">
+    <h3>Free tools</h3>
+    <p>Free tools for working on lyrics before you bring anyone in.</p>
+    <a href="https://findmyrhyme.com">Rhyme Generator</a>
+    <a href="https://freeplagiarismcheck.com">Plagiarism Checker</a>
+    <a href="https://aicontentdetectorfree.com">AI Content Detector</a>
   </div>
 
-  <!-- TOOLS SECTION -->
-  <div class="tools-section">
-    <h3> Free Tools for Songwriters & Lyricists</h3>
-    <p>Use these free tools to craft better lyrics, find rhymes, and build your songs</p>
-    <div class="tools-grid">
-      <a href="https://findmyrhyme.com" class="tool-link"> Rhyme Generator</a>
-      <a href="https://freeplagiarismcheck.com" class="tool-link"> Plagiarism Checker</a>
-      <a href="https://aicontentdetectorfree.com" class="tool-link"> AI Content Detector</a>
-    </div>
-  </div>
-
-  <!-- LIST YOURSELF -->
-  <div class="list-section" id="list-yourself">
-    <h3>Corrections and removals</h3>
-    <p>We are not accepting listings. If something on this page is wrong, or you want a reference to you changed or removed, email <a href="mailto:shane@warrenbg.com?subject=songwriterdirectory.com%20correction%20or%20removal" style="color:inherit;text-decoration:underline">shane@warrenbg.com</a> and we will action it.</p>
-  </div>
-
-  <div class="content-section">
-    <h2>How to Hire a Songwriter</h2>
-    <p>Start by knowing your genre, your budget, and what you actually want delivered — a hook, a full song, or a co-write. Ask for two samples close to your brief, agree the split and credit in writing before work starts, and be explicit about who owns the master and the publishing.</p>
-
-    <h2>What Does a Songwriter Cost?</h2>
-    <ul>
-      <li><strong>Entry-level / indie:</strong> $100–$300 per song</li>
-      <li><strong>Mid-level / experienced:</strong> $300–$800 per song</li>
-      <li><strong>Commercial / sync:</strong> $500–$2,000+ per project</li>
-      <li><strong>Major label / placement deals:</strong> Negotiated per project</li>
-    </ul>
-
-    <h2>What is Ghostwriting in Music?</h2>
-    <p>Ghostwriting means a songwriter writes lyrics or songs for an artist who releases the work under their own name. This is completely legal and common across all genres. Many artists work with ghostwriters for albums, singles, and commercial projects.</p>
-
-    <h2>Free Songwriter Tools</h2>
-    <p>Before hiring a songwriter, try our free tools. The <a href="https://findmyrhyme.com" style="color:#7c3aed">Rhyme Generator</a> helps you find perfect rhymes for your lyrics. Great for co-writing sessions or getting started on a song before bringing in a professional.</p>
-  </div>
-</main>
+  <h2>Corrections and removals</h2>
+  <p>This site does not list songwriters and is not accepting listings. If something on this page is wrong, or you or your business are referred to anywhere here and you want that changed or removed, email us and we will action it.</p>
+  <p><a href="mailto:shane@warrenbg.com?subject=songwriterdirectory.com%20correction%20or%20removal"><strong>shane@warrenbg.com</strong></a></p>
+</div>
 
 <footer>
-  © 2026 SongwriterDirectory.com — General guidance only. We do not list, verify, rate or endorse songwriters.
-  <span style="display:block;margin-top:0.35rem"><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a> · <a href="https://findmyrhyme.com">Rhyme Generator</a></span>
-  <p style="margin-top:0.5rem">A service of <a href="https://warrenbg.com" style="color:#f59e0b;font-weight:700;">Warren Business Group</a> &mdash; Building AI-powered businesses.</p>
+  <p>&copy; 2026 SongwriterDirectory.com — General market guidance only. We do not list, verify, rate or endorse songwriters.</p>
+  <p style="margin-top:0.4rem"><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a></p>
+  <p style="margin-top:0.5rem">A service of Warren Business Group</p>
 </footer>
 
 </body>
